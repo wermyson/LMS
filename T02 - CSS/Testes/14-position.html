@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .ex1 {
+        border: 3px solid black;
+        height: 400px;
+        width: 400px;
+        margin: auto;
+        position: relative;
+        }
+        .tamanho-200-azul{
+            background-color: rgb(64, 64, 129);
+            height: 200px;
+            width: 200px;
+        }
+        .tamanho-200-verde{
+            background-color: rgb(64, 129, 68);
+            height: 200px;
+            width: 200px;
+        }
+        .div1{
+            position: static;
+        }
+
+        .div2{
+            /* esse é o valor padrão de position */
+            position: static;
+        }
+        .div3{
+            position: static;
+            /* right: 1px;
+            bottom: 1px; */
+        }
+        .div5{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+        .div7 {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="ex1">
+        <div class="div1 tamanho-200-azul"></div>
+        <div class="div2 tamanho-200-verde"></div>
+    </div>
+    <div class="ex1">
+        <div class="div3 tamanho-200-azul"></div>
+        <div class="div4 tamanho-200-verde"></div>
+    </div>
+    <div class="ex1">
+        <div class="div5 tamanho-200-azul"></div>
+        <div class="div6 tamanho-200-verde"></div>
+    </div>
+    <div class="ex1">
+        <div class="div7 tamanho-200-azul"></div>
+        <div class="div8 tamanho-200-verde"></div>
+    </div>
+</body>
+</html>

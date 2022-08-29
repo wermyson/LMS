@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(158, 132, 119);
+}
+
+.menu-superior {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(73, 57, 49);
+    padding: 16px 32px;
+}
+
+.menu-superior > .titulo {
+    color: aliceblue;
+    cursor:context-menu;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-superior > nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-superior > nav > .botao {
+    color: white;
+    background-color: rgb(73, 57, 49);
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.menu-superior > nav > .botao:hover{
+    color: rgb(73, 57, 49);
+    background-color: rgb(255, 255, 255);
+}
+
+.menu-superior > nav > div > .dropdown {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 48px;
+    border-radius: 8px;
+}
+
+.menu-superior > nav > div > .dropdown > a {
+    color: rgb(73, 57, 49);
+    text-decoration: none;
+    text-align: left;
+    padding: 8px 16px 8px 32px;
+    display: block;
+}
+.menu-superior > nav > div:hover > .dropdown {
+    display: block;
+}
+.menu-superior > nav > div > .dropdown > a:hover {
+    color: rgb(255, 250, 250);
+    background-color: rgb(49, 38, 38);
+    border-radius:8px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 160px;
+    align-items: center;
+}
+
+.home > article {
+    font-size: 1.2em;
+    width: 720px;
+    border: grey 1px solid;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 32px;
+    background-color: aliceblue;
+}
+
+ 
+.home > article > header > h1 {
+    font-size: 1.6em;
+    text-align: left;
+    color: black;
+    margin-bottom: 16px;
+}
+
+.home > article > img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}

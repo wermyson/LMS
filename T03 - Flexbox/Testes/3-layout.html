@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .navegador {
+        background-color: grey;
+        display: flex;
+      }
+
+      .navegador a,
+      .container1 .menu1 a,
+      .container2 .menu2 a {
+        display: block;
+        padding: 16px;
+        text-decoration: none;
+        color: black;
+      }
+
+      .navegador a:hover,
+      .container1 .menu1 a:hover,
+      .container2 .menu2 a:hover {
+        background-color: aliceblue;
+      }
+
+      .container1,
+      .container2 {
+        display: flex;
+      }
+
+      .container1 .menu1 {
+        background-color: rgb(180, 180, 180);
+        flex-grow: 1;
+      }
+
+      .container1 .conteudo1 {
+        background-color: rgb(160, 160, 160);
+        flex-grow: 3;
+      }
+
+      .container2 .menu2 {
+        background-color: rgb(180, 180, 180);
+        flex-basis: 400px;
+      }
+
+      .container2 .conteudo2 {
+        background-color: rgb(160, 160, 160);
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navegador">
+      <a href="">Link1</a>
+      <a href="">Link2</a>
+      <a href="">Link3</a>
+      <a href="">Link4</a>
+    </nav>
+    <div class="container1">
+      <div class="menu1">
+        <a href="">Seção 01</a>
+        <a href="">Seção 02</a>
+        <a href="">Seção 03</a>
+        <a href="">Seção 04</a>
+      </div>
+      <div class="conteudo1">Aqui vem meu conteudo</div>
+    </div>
+    <div class="container2">
+      <div class="menu2">
+        <a href="">Seção 01</a>
+        <a href="">Seção 02</a>
+        <a href="">Seção 03</a>
+        <a href="">Seção 04</a>
+      </div>
+      <div class="conteudo2">Aqui vem meu conteudo</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagens</title>
+  </head>
+
+  <style>
+    h1 {
+      color: blue;
+    }
+
+    .borda {
+      border: solid black 2px;
+    }
+
+    .corVermelha {
+      color: red;
+    }
+  </style>
+
+  <body>
+    <h1 class="titulo">Meu titulo</h1>
+
+    <img src="https://loremflickr.com/320/320/dog" alt="" class="borda" />
+    <script>
+      let titulo = document.querySelector(".titulo");
+      titulo.innerHTML = "Meu titulo mudado";
+      titulo.classList.add("corVermelha", "borda");
+      titulo.classList.remove("borda");
+      titulo.classList.toggle("corVermelha");
+      let imagem = document.querySelector(".imagem");
+      imagem.src = "https://loremflickr.com/320/320/cat";
+      imagem.style.borda.border = "solid green 2px";
+    </script>
+  </body>
+</html>

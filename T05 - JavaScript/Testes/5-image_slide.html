@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    .slideshow {
+      position: relative;
+    }
+
+    .slideshow img {
+      display: none;
+    }
+
+    .slideshow img.active {
+      display: block;
+    }
+
+    .slideshow .seta-esquerda {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      font-size: 32px;
+      color: white;
+      padding: 4px 16px;
+      border-radius: 0px 4px 4px 0px;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.2);
+      transform: translate(0, -50%);
+      user-select: none;
+    }
+
+    .slideshow .seta-direita {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      font-size: 32px;
+      color: white;
+      padding: 4px 16px;
+      border-radius: 4px 0px 0px 4px;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.2);
+      transform: translate(0, -50%);
+      user-select: none;
+    }
+
+    .indicators {
+      width: 150px;
+      display: flex;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      justify-content: space-between;
+    }
+
+    .indicators .indicador {
+      width: 32px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .indicators .indicador.active {
+      background-color: white;
+    }
+  </style>
+  <body>
+    <div class="slideshow">
+      <img
+        class="active"
+        src="https://loremflickr.com/500/260/?random2"
+        alt=""
+      />
+      <img src="https://loremflickr.com/500/260/?random3" alt="" />
+      <img src="https://loremflickr.com/500/260/?random1" alt="" />
+      <img src="https://loremflickr.com/500/260/?random4" alt="" />
+      <span class="seta-esquerda"> &lt; </span>
+      <span class="seta-direita"> &gt; </span>
+      <div class="indicators">
+        <div class="indicador active"></div>
+        <div class="indicador"></div>
+        <div class="indicador"></div>
+        <div class="indicador"></div>
+      </div>
+    </div>
+
+    <script>
+      let seta_esquerda = document.querySelector(".slideshow .seta-esquerda");
+      let seta_direita = document.querySelector(".slideshow .seta-direita");
+      let imagens = document.querySelectorAll(".slideshow img");
+      let imagem_ativa = 0;
+      let indicators = document.querySelectorAll(".slideshow .indicador");
+
+      seta_direita.addEventListener("click", function () {
+        imagens[imagem_ativa].classList.remove("active");
+        indicators[imagem_ativa].classList.remove("active");
+        imagem_ativa += 1;
+        if (imagem_ativa >= imagens.length) {
+          imagem_ativa = 0;
+        }
+        imagens[imagem_ativa].classList.add("active");
+        indicators[imagem_ativa].classList.add("active");
+      });
+
+      seta_esquerda.addEventListener("click", function () {
+        imagens[imagem_ativa].classList.remove("active");
+        indicators[imagem_ativa].classList.remove("active");
+        imagem_ativa -= 1;
+        if (imagem_ativa < 0) {
+          imagem_ativa = imagens.length - 1;
+        }
+        imagens[imagem_ativa].classList.add("active");
+        indicators[imagem_ativa].classList.add("active");
+      });
+    </script>
+  </body>
+</html>

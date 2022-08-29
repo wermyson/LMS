@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+            font-size: 30px; 
+            font-family: Arial, Helvetica, sans-serif; 
+            margin-left: 12px;
+        }
+
+        #meu-titulo {
+            font-size: 50px;
+        }
+
+        .meu-titulo-personalizado {
+            color: green;
+        }
+        div {
+            margin-left: 20px;
+        }
+        div p {
+            font-size: 20px;
+            color: blueviolet;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .div-estilizada > .p-estilizado{
+            color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 id=meu-titulo>
+        Meu titulo h1
+    </h1>
+
+    <h1 class=meu-titulo-personalizado>
+        Meu outro titulo h1
+    </h1>
+
+    <p>
+        Meu paragrafo fora da div
+    </p>
+
+    <div>
+        <p>
+            Meu paragrafo dentro da div
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Meu paragrafo dentro de outra div
+        </p>
+    </div>
+    <div class="div-estilizada">
+        <p class="p-estilizado">
+            Eu quero esse paragrafo com a cor rosa
+        </p>
+        <div>
+            <p class="p-estilizado">
+                Esse paragrafo não deve ter cor rosa
+            </p>
+        </div>
+    </div>
+</body>
+</html>

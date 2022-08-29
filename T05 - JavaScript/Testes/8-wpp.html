@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .card {
+        width: 200px;
+        /* height: 100px; */
+        margin-top: 8px;
+        padding: 10px;
+        background-color: rgb(219, 219, 219);
+      }
+
+      .card .nome-card {
+        padding: 0px 0px 8px 0px;
+      }
+
+      .mural {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      nome: <input type="text" id="" class="nome-form" />
+      mensagem:
+      <input type="text" id="" class="mensagem-form" />
+      <input type="submit" value="Adicioanr" class="submit-button" />
+    </form>
+    <div class="mural">
+      <div class="card">
+        <h3 class="nome-card">João</h3>
+        <p class="mensagem-card">Oi, tudo bem?</p>
+      </div>
+    </div>
+
+    <script>
+      let nome_form = document.querySelector(".nome-form");
+      let mensagem_form = document.querySelector(".mensagem-form");
+      let submit_button = document.querySelector(".submit-button");
+      let mural = document.querySelector(".mural");
+
+      submit_button.addEventListener("click", function (event) {
+        event.preventDefault();
+        let nome = nome_form.value;
+        let mensagem = mensagem_form.value;
+        let card = document.createElement("div");
+        card.classList.add("card");
+        mural.appendChild(card);
+
+        let h3 = document.createElement("h3");
+        h3.classList.add("nome-card");
+        let text_h3 = document.createTextNode(nome);
+        h3.appendChild(text_h3);
+        card.appendChild(h3);
+
+        let p = document.createElement("p");
+        p.classList.add("mensagem-card");
+        let text_p = document.createTextNode(mensagem);
+        p.appendChild(text_p);
+        card.appendChild(p);
+      });
+    </script>
+  </body>
+</html>

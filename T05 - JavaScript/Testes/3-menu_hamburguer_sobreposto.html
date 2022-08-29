@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Hambuergue</title>
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .navegador {
+      background-color: rgb(209, 209, 209);
+    }
+
+    .navegador .cabecalho-navegador {
+      display: flex;
+      padding: 8px;
+      align-items: center;
+    }
+
+    .navegador .cabecalho-navegador .botao {
+      margin-left: auto;
+      padding: 9px 20px;
+      outline: none;
+      border: solid rgba(0, 0, 0, 0.2) 2px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .navegador .menu-retratil {
+      height: 0px;
+      overflow: hidden;
+      transition: height 600ms;
+      background-color: rgb(209, 209, 209);
+      width: 100%;
+      position: absolute;
+    }
+    .navegador .menu-retratil a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      padding: 20px;
+    }
+
+    .navegador .menu-retratil a:hover {
+      background-color: rgb(161, 161, 161);
+    }
+
+    .navegador .menu-retratil.active {
+      height: 236px;
+    }
+  </style>
+  <body>
+    <nav class="navegador">
+      <div class="cabecalho-navegador">
+        <h3 class="titulo">Menu Hambuguer</h3>
+        <button class="botao">&#9776;</button>
+      </div>
+      <div class="menu-retratil active">
+        <a href="">Links 01</a>
+        <a href="">Links 02</a>
+        <a href="">Links 03</a>
+        <a href="">Links 04</a>
+      </div>
+    </nav>
+    <img src="https://loremflickr.com/320/1000" alt="" class="imagem" />
+  </body>
+
+  <script>
+    let botao = document.querySelector(
+      ".navegador .cabecalho-navegador button"
+    );
+
+    let menuRetratil = document.querySelector(".navegador .menu-retratil ");
+
+    botao.addEventListener("click", function () {
+      menuRetratil.classList.toggle("active");
+    });
+  </script>
+</html>

@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navegador {
+  display: flex;
+  background-color: rgb(49, 32, 32);
+  /* justify-content: space-around; */
+}
+
+.navegador a {
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+}
+
+.navegador a:hover {
+  background-color: rgb(83, 70, 70);
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+}
+
+.menuEsquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: rgb(75, 60, 60);
+}
+
+.home .menuEsquerdo a {
+  width: 300px;
+  text-align: center;
+  padding: 16px 0px;
+  text-decoration: none;
+  color: white;
+}
+
+.home .menuEsquerdo a:hover {
+  background-color: rgb(173, 173, 173);
+  color: black;
+}
+
+.home .principal {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+.home .principal .conteudo {
+  display: flex;
+  width: min-content;
+  flex-grow: 3;
+  flex-basis: 3;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.home .principal .conteudo img {
+  object-fit: cover;
+  width: min-content;
+  margin: 16px;
+  border-radius: 8px;
+  height: 150px;
+  width: 150px;
+}
+
+.home .principal .menuDireito {
+  background-color: rgb(155, 133, 133);
+  display: flex;
+  flex-basis: 1;
+  width: min-content;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.home .principal .menuDireito a {
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.copyright {
+  display: flex;
+  background-color: black;
+  padding: 8px;
+  flex-direction: row-reverse;
+}
+
+.copyright h1 {
+  color: white;
+  font-size: 16px;
+  margin-right: 16px;
+}
